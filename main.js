@@ -1,37 +1,49 @@
-function saludar() {
-    let nombre = prompt("Ingrese el nombre");
-    console.log("Hola", nombre);
-    alert(`Hola ${nombre}`);
+const productos = [];
+
+class Producto {
+    constructor(nombre) {
+        this.id = productos.length + 1;
+        this.nombre = nombre;
+    }
 }
 
-saludar();
 
 
-let producto = prompt("Que producto estas buscando?");
-let precio = Number;
+for (let i = 0; i < 5; i++) {
 
-while (producto != "casco") {
-    if (producto == "canilleras" && precio || producto == "palos") {
-        alert("Tenemos stock");
-        pago = prompt ("Como queres ralizar el pago?")
+    let nombre = prompt("Que producto estas buscando?");
+    let producto = new Producto(nombre);
+    productos.push(producto);
 
-    } else if (producto == "botines" || producto == "protecciones") {
-        alert("Ultimas unidades en stock");
-        pago = prompt ("Como queres ralizar el pago?")
-    } else {
-        alert("No se pudo encontrar el producto en nuestra tienda");
-        producto = prompt("Que producto estas buscando?");
-    }
-} alert ("Producto fuera de stock momentaneamente");
-producto = prompt("Que producto estas buscando?");
+}
+console.log(productos);
 
+let agregar = Number(prompt ("Si desea agregar mas productos pulse 1, si desea finalizar pulse 2"))
 
-let pago = prompt ("Como queres ralizar el pago?") 
+if (agregar == 1) {
+    nombre = prompt("Que producto estas buscando?");
+} else if (agregar == 2) {
+    alert ("Muchas gracias por su visita")
+}
 
 
+    
+        
+    
+    
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
