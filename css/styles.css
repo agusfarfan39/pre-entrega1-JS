@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Play", sans-serif;
+  }
+  
+  body {
+    background-color: black;
+    height: 80vh;
+  }
+  
+  ul,
+  ol {
+    list-style-type: none;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .contenedor {
+    margin: 0 auto;
+    max-width: 1500px;
+  }
+  
+  
+  /* ---------------------FOOTER------------------------- */
+  footer {
+    border-top: 2px solid white;
+    padding-top: 3 rem;
+    color: white;
+  }
+  
+  .contenedor-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .footer-ayuda {
+    padding-top: 1rem;
+  }
+  
+  .contenedor-footer h4 {
+    font-size: 1rem;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+  }
+  
+  footer h4,
+  footer ul {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  footer input {
+    text-align: center;
+    padding: 0.3rem;
+    margin-top: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .contenedor-footer {
+      flex-direction: row;
+      justify-content: space-between;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem;
+    color: rgb(226, 138, 6);
+  }
+  
+  
+  /* ------------------------------------------HEADER------------------------------------ */
+  
+  header {
+    color: white;
+    border-bottom: 2px solid white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  a:hover {
+    color: #e28a06;
+  }
+  
+  .formulario {
+    display: none;
+  }
+  
+  .indicador {
+    lighting-color: rgb(226, 138, 6);
+  }
+  
+  h1 a {
+    color: rgb(226, 138, 6);
+    font-size: 1.6rem;
+    display: flex;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  .dropdown-menu {
+    background-color: black;
+  }
+  
+  .dropdown-menu a {
+    color: white;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #e28a06;
+  }
+  
+  .btn {
+    color: rgb(226, 138, 6);
+    border: solid rgb(226, 138, 6) 2px;
+    transition: 0.3s ease;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: end;
+    gap: 0.5rem;
+  }
+  
+  @media (min-width: 480px) {
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .barra {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  @media (min-width: 576px) {
+    header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 2fr 2fr;
+    }
+    header h1 {
+      color: rgb(226, 138, 6);
+      font-size: 1.6rem;
+      display: flex;
+      text-align: left;
+      align-items: center;
+      font-size: 2rem;
+    }
+    header nav {
+      display: flex;
+      grid-column: span 3;
+      text-align: center;
+      justify-content: center;
+    }
+    .formulario {
+      padding: 1rem;
+      justify-self: center;
+      align-self: center;
+      gap: 1rem;
+      display: flex;
+    }
+    .buscador {
+      background-color: black;
+      color: white;
+      border: #e28a06 solid 2px;
+      border-radius: 3px;
+    }
+  }
+  .input-group {
+    font-size: 0.5rem;
+  }
+  
+  
+  /* -----------------------------------MAIN INDEX------------------------------------------------- */
+  .portada {
+    padding: 2rem 2rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .index-texto {
+    padding-bottom: 3rem;
+    color: white;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    border-bottom: 1px solid white;
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .galeria {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    background-color: black;
+  }
+  .galeria .boton-galeria {
+    border: 2px solid rgb(226, 138, 6);
+    background-color: rgb(226, 138, 6);
+    border-radius: 5px;
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: 0.3s ease;
+  }
+  .galeria .boton-galeria:hover {
+    background-color: black;
+  }
+  @media (min-width: 768px) {
+    .galeria {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .boton-galeria {
+      grid-column: 2/3;
+    }
+    .portada {
+      min-height: 80vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+    .index-texto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      border-bottom: 0;
+    }
+  }
+  @media (min-width: 1200px) {
+    header {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+    h1 {
+      align-self: center;
+      font-size: 2rem;
+    }
+    .barra {
+      font-size: 1.2rem;
+    }
+  }
+  /* -------------------------PRODUCTOS------------------------- */
+  
+  .contenedor-productos #contenedor-productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  h5 {
+    font-size: 1.8rem;
+  }
+  
+  .card {
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+  }
+  .card p {
+    font-size: 1.2rem;
+  }
+  
+  @media (min-width: 576px) {
+    .contenedor-productos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    .contenedor-productos {
+      justify-content: center;
+      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
